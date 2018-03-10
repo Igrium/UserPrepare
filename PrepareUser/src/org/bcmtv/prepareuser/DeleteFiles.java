@@ -22,6 +22,6 @@ public class DeleteFiles
 	public static void main(String[] args)
 	{
 		DeleteFiles deleteFiles = new DeleteFiles();
-		deleteFiles.deleteFiles("/Users/Sam54123/Documents/java/PrepareDefaultUser/Guest");
+		deleteFiles.deleteFiles(args[0]);
 	}
 }
