@@ -21,7 +21,14 @@ public class DeleteFiles
 	
 	public static void main(String[] args)
 	{
-		DeleteFiles deleteFiles = new DeleteFiles();
-		deleteFiles.deleteFiles(args[0]);
+		if (args.length == 1)
+		{
+			DeleteFiles deleteFiles = new DeleteFiles();
+			deleteFiles.deleteFiles(args[0]);
+		}
+		else
+		{
+			System.out.println("usage: java PrepareUser [folder]");
+		}
 	}
 }
