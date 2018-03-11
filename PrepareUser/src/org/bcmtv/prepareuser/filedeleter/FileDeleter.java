@@ -5,6 +5,7 @@ package org.bcmtv.prepareuser.filedeleter;
 
 import java.io.File;
 
+import org.bcmtv.prepareuser.PrepareUser;
 import org.bcmtv.prepareuser.util.Log;
 
 public class FileDeleter 
@@ -44,6 +45,7 @@ public class FileDeleter
 		if(success)
 		{
 			Log.currentLog.add("Deleted "+file.getName());
+			PrepareUser.success = true;
 			return true;
 		}
 		else

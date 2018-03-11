@@ -21,7 +21,7 @@ public class LogGui
 	
 	public void show()
 	{
-		frame = new JFrame();
+		frame = new JFrame("Log");
 		text = new JTextArea(10,20);
 		text.setLineWrap(false);
 		text.setEditable(false);

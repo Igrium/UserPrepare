@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+import org.bcmtv.prepareuser.PrepareUser;
 import org.bcmtv.prepareuser.util.Log;
 
 public class FinishedGui 
@@ -28,17 +29,30 @@ public class FinishedGui
 	
 	public void show()
 	{
-		frame = new JFrame();
+		frame = new JFrame("Prepare Finished");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//main panel
+		JPanel panel1 = new JPanel();
+		frame.getContentPane().add(BorderLayout.CENTER, panel1);
 		
 		//center label
-		JLabel label = new JLabel("User Prepared Successfully!");
-		frame.getContentPane().add(BorderLayout.CENTER, label);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JLabel label = new JLabel();
+		panel1.add(BorderLayout.CENTER, label);
+		
+		if (PrepareUser.success)
+		{
+			label.setText("User Prepared Successfully!");
+		}
+		else
+		{
+			label.setText("User Prepare Unsuccessful");
+		}
 		
 		//buttons panel
 		JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-		frame.getContentPane().add(BorderLayout.SOUTH, panel);
+		panel1.add(BorderLayout.SOUTH, panel);
 		
 		//quit button
 		JButton quitButton = new JButton("Quit");
@@ -51,7 +65,7 @@ public class FinishedGui
 		logButton.addActionListener(new LogListener());
 		
 		//render on screen
-		frame.setSize(200, 100);
+		frame.setSize(210, 100);
 		frame.setResizable(false);
 		frame.setVisible(true);
 		

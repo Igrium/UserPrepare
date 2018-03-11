@@ -18,7 +18,15 @@ public class DeleteFiles
 		//actually remove the files
 		FileDeleter deleter = new FileDeleter();
 		deleter.deleteFiles(files);
-		Log.currentLog.add("Finished preparing account");
+		
+		if (PrepareUser.success)
+		{
+			Log.currentLog.add("User Prepared Successfully!");
+		}
+		else
+		{
+			Log.currentLog.add("User Prepare Unsuccessful");
+		}
 	}
 	
 	public static void main(String[] args)

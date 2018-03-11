@@ -5,6 +5,9 @@ import org.bcmtv.prepareuser.util.Log;
 
 public class PrepareUser 
 {
+	
+	public static boolean success = false;
+	
 	public static void main(String[] args)
 	{
 		Log log = new Log();

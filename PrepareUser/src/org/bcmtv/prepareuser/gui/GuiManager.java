@@ -1,7 +1,5 @@
 package org.bcmtv.prepareuser.gui;
 
-import org.bcmtv.prepareuser.util.Log;
-
 public class GuiManager {
 	public void init()
 	{
