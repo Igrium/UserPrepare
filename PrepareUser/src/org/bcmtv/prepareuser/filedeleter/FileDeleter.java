@@ -5,6 +5,8 @@ package org.bcmtv.prepareuser.filedeleter;
 
 import java.io.File;
 
+import org.bcmtv.prepareuser.util.Log;
+
 public class FileDeleter 
 {
 	//Recursively delete files in a directory
@@ -41,18 +43,18 @@ public class FileDeleter
 		
 		if(success)
 		{
-			System.out.println("Deleted "+file.getName());
+			Log.currentLog.add("Deleted "+file.getName());
 			return true;
 		}
 		else
 		{
 			if(!file.exists())
 			{
-				System.out.println("Failed to delete "+file.getName()+" because it doesn't exist.");
+				Log.currentLog.add("Failed to delete "+file.getName()+" because it doesn't exist.");
 			}
 			else
 			{
-				System.out.println("Failed to delete "+file.getName());
+				Log.currentLog.add("Failed to delete "+file.getName());
 			}
 			return false;
 		}
