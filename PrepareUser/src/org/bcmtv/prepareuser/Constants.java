@@ -11,7 +11,6 @@ public abstract class Constants
 				"Library/Calendars",
 				"Library/CallServices",
 				"Library/com.apple.nsurlsessiond",
-				"Library/Compositions",
 				"Library/Containers",
 				"Library/Cookies",
 				"Library/CoreFollowUp",
@@ -30,7 +29,14 @@ public abstract class Constants
 				"Library/Sharing",
 				"Library/Spelling",
 				"Library/Suggestions",
-				"Library/Test"
+				"Library/Colors",
+				"Library/Group Containers",
+				"Library/IdentifyServices",
+				"Library/KeyboardServices",
+				"Library/PubSub",
+				"Library/Safari",
+				"Library/WebKit",
+				"Documents"
 		};
 	
 	

@@ -45,7 +45,10 @@ public class FileDeleter
 		if(success)
 		{
 			Log.currentLog.add("Deleted "+file.getName());
-			PrepareUser.success = true;
+			if(!(file.getName() == ".DS_Store"))
+			{
+				PrepareUser.success = true;
+			}
 			return true;
 		}
 		else
